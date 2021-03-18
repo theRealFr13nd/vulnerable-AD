@@ -65,7 +65,7 @@ function VulnAD-AddADUser {
     )
     Add-Type -AssemblyName System.Web
     for ($i=1; $i -le $limit; $i=$i+1 ) {
-        $firstname = ($Global:HumansNames[$i]);
+        $firstname = ($Global:Username[$i]);
         $SamAccountName = ("{0}" -f ($firstname)).ToLower();
         $principalname = "{0}" -f ($firstname);
         $generated_password = ($Global:BadPasswords[$i])
